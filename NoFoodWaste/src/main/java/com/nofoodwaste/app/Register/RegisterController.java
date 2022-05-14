@@ -27,7 +27,9 @@ public class RegisterController {
     @PostMapping("/login")
     public String login(@ModelAttribute User userForm, HttpSession session){
         User actif = IUser.findByEmailAndPassword(userForm.getEmail(), userForm.getPassword());
-
+        if(actif!=null){
+            session.setAttribute("user", actif);
+        }
         return "home";
     }
     @GetMapping("/login")
