@@ -1,9 +1,7 @@
-package user;
+package User;
 
 import lombok.*;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import javax.persistence.*;
 
 @Entity
@@ -14,8 +12,7 @@ import javax.persistence.*;
 @With
 @ToString
 @EqualsAndHashCode
-@Table(name = "user", schema = "public")
-
+@Table(name = "User", schema = "public")
 @SpringBootApplication
 public class User {
 
