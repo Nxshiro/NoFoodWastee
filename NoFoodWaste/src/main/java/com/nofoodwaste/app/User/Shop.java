@@ -31,6 +31,9 @@ public class Shop {
     private String panier;
     //je pars du principe que les commerçant propose un seul panier
 
+    @Column(name = "description")
+    private String description;
+    //description du panier
 
 
 }

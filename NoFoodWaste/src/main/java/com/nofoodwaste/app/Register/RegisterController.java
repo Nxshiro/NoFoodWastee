@@ -4,13 +4,20 @@ import com.nofoodwaste.app.User.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class RegisterController {
 
+    @PostMapping("register")
+    public String register(){
+
+        return "login";
+    }
     @GetMapping
     public String register(Model model){
         model.addAttribute("username",new User());
+        model.addAttribute("mdp",new User());
         return "register";
     }
 }
