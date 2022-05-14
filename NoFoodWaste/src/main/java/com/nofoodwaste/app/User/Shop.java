@@ -1,7 +1,6 @@
-package User;
+package com.nofoodwaste.app.User;
 
 import lombok.*;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import javax.persistence.*;
 
 @Entity
@@ -13,7 +12,6 @@ import javax.persistence.*;
 @ToString
 @EqualsAndHashCode
 @Table(name = "shop", schema = "public")
-@SpringBootApplication
 public class Shop {
 
     private static final long serialVersionUID = 1L;

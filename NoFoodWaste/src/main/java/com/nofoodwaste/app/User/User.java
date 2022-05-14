@@ -1,7 +1,6 @@
-package User;
+package com.nofoodwaste.app.User;
 
 import lombok.*;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import javax.persistence.*;
 
 @Entity
@@ -13,7 +12,6 @@ import javax.persistence.*;
 @ToString
 @EqualsAndHashCode
 @Table(name = "User", schema = "public")
-@SpringBootApplication
 public class User {
 
 	private static final long serialVersionUID = 1L;
@@ -42,7 +40,7 @@ public class User {
 	@JoinColumn(name = "shop_id")
 	private Shop shop;
 
-	public String getUsername() {
+	public String getMail() {
 		return this.email;
 	}
 
