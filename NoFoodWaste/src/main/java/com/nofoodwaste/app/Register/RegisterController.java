@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class RegisterController {
 
-
-
     @PostMapping("register")
     public String register(){
 
@@ -23,7 +21,7 @@ public class RegisterController {
         return "register";
     }
 
-    @PostMapping("login")
+    @PostMapping("/login")
     public String login(){
 
         return "login";
