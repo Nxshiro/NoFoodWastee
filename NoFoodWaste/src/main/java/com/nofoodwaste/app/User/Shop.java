@@ -21,10 +21,16 @@ public class Shop {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "name", unique = true)
     private String name;
 
     @Column(name = "city")
     private String city;
+
+    @Column(name = "panier")
+    private String panier;
+    //je pars du principe que les commerçant propose un seul panier
+
+
 
 }

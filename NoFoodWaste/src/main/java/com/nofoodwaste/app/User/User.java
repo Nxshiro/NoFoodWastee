@@ -21,17 +21,17 @@ public class User {
 	@Column(name = "id")
 	private Long id;
 
-	@Column(name = "first_name")
-	private String firstName;
+	@Column(name = "nom")
+	private String nom;
 
-	@Column(name = "last_name")
-	private String lastName;
-
-	@Column(name = "password")
-	private String password;
+	@Column(name = "prenom")
+	private String prenom;
 
 	@Column(name = "email", unique = true)
 	private String email;
+
+	@Column(name = "password")
+	private String password;
 
 	@Column(name = "role")
 	@Enumerated(EnumType.STRING)
@@ -43,8 +43,5 @@ public class User {
 	public String getMail() {
 		return this.email;
 	}
-
-
-
 
 }
