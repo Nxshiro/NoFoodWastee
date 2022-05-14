@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:xlmns="http://www.w3.org/1999/xhtml" xlmns:th="http://thymeleaf.org"
+      xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Inscription</title>
 </head>
 <body>
-    <form>
-        <h1>Inscription</h1>
-        <input name="nom" type="text" placehold="Nom"/>
-        <input name="prenom" type="text" placehold="Prenom"/>
-        <input name="mail" type="text" placeholder="Mail"/>
-        <input name="mdp" type="text" placeholder="Mot de passe"/>
+    <form method="post" th:action="@{/register}" th:object="${userForm}">
+        <h1>Vous etes nouveau ?</h1>
+        <input name="nom" type="text" placehold="Nom" th:field="*{nom}"/>
+        <input name="prenom" type="text" placehold="Prenom" th:field="*{prenom}"/>
+        <input name="mail" type="text" placeholder="Mail" th:field="*{email}"/>
+        <input name="mdp" type="text" placeholder="Mot de passe" th:field="*{password}"/>
         <button type="submit">S'inscrire</button>
     </form>
 </body>

@@ -14,8 +14,6 @@ import javax.persistence.*;
 @Table(name = "User", schema = "public")
 public class User {
 
-	private static final long serialVersionUID = 1L;
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")

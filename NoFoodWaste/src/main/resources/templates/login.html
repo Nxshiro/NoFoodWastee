@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" lang="en" xmlns:xlmns="http://www.w3.org/1999/xhtml" xlmns:th="http://thymeleaf.org"
+      xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Connexion</title>
     <h1>NO FOOD WASTE</h1>
 </head>
 <body>
-<form>
+<form method="post" th:action="@{/register}" th:object="${userForm}">
     <h2>Connexion</h2>
-    <input name="mail" type="text" placeholder="Mail"/>
-    <input name="mdp" type="text" placeholder="Mot de passe"/>
+    <input name="mail" type="text" placeholder="Mail" th:field="*{email}"/>
+    <input name="mdp" type="text" placeholder="Mot de passe" th:field="*{password}"/>
     <button type="submit">Se connecter</button>
 </form>
 </body>

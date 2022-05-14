@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" lang="en" xmlns:xlmns="http://www.w3.org/1999/xhtml" xlmns:th="http://thymeleaf.org"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <h1>Page d'Accueil</h1>
+</head>
+<body>
+    <div id="searchbar">
+        <form action="" class="formulaire">
+            <input type="text" value="Recherche"/>
+            <input type="button" value=" " />
+        </form>
+    </div>
+    <div
+    <table>
+        <tr>
+            <th>NOM</th>
+            <th>VILLE</th>
+            <th>CATEGORIE</th>
+        </tr>
+        <tr th:each="prod : ${shop}">
+            <td th:text="${name}"></td>
+            <td th:text="${ville}"></td>
+            <td th:text="${categorie}"></td>
+        </tr>
+
+
+    </table>
+    </div>
+</body>
+</html>
